@@ -1,0 +1,11 @@
+Package: asmidx
+Type: Package
+Title: Quantify and Rank Genome Assemblies Using Shiny
+Imports: stats, utils, tools, fs, ggplot2, ggrepel, shiny, shinyWidgets, tidyverse, cowplot
+Version: 0.1.0
+Author: Gen Morinaga
+Description: Compare genome assemblies by a user-defined set of metrics and visualize their rankings using Shiny. Convenience functions are provided for properly formatting an input dataframe.
+License: GPL (>=3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
