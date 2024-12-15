@@ -43,7 +43,16 @@
 #' do.call('rbind', lapply(list.files(pattern = '.bed', insp_stbed2df, summarise = T)))
 #' @export
 insp_stbed2df<-function(path_to_bed, summarise = T) {
-  dat<-read.table(path_to_bed, header = F, sep = '\t', quote = '', fill = T)[, 1:6]
+  dat <- tryCatch(read.table(path_to_bed, header = F, sep = "\t", quote = "", 
+                    fill = T)[, 1:6], 
+                  error = function(e) {
+                    message(paste('The following file does not contain rows:', path_to_bed))
+                    message('We will assume that no errors were detected in this assembly')
+                    message('Creating a dataframe with 0s for each error type')
+                    data.frame(contig = rep('x', 4), start = rep(0, 4), end = rep(0, 4),
+                               n.support.reads = rep(0, 4), type = c('Collapse', 'Expansion', 'HaplotypeSwitch', 'Inversion'),
+                               size = rep(0, 4))
+                  })
   colnames(dat)<-c('contig', 'start', 'end', 'n.support.reads', 'type', 'size')
   dat$size<-as.numeric(gsub('(Size=)([0-9]+)(;?[0-9]+)', '\\2', dat$size))
   dat$start<-as.integer(gsub('([0-9]+);([0-9]+)', '\\1', dat$start))
