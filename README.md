@@ -1,3 +1,9 @@
+# Citation
+If you use `asmidx` in a publication, please cite our pre-print:
+
+Morinaga, Gen, Darío Balcazar, Athanase Badolo, Diana Iyaloo, Luciano Tantely, Theo Mouillaud, Maria Sharakhova, et al. “From Macro to Micro: De Novo Genomes of Aedes Mosquitoes Enable Comparative Genomics among Close and Distant Relatives,” 2025. https://doi.org/10.1101/2025.01.13.632753.
+
+
 # Install
 To install `asmidx`, paste the following into the R console.
 ```
