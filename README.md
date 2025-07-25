@@ -1,5 +1,6 @@
 # Citation
-If you use `asmidx` in a publication, please cite:
+If you use `asmidx` in your work, please cite: <br>
+
 Morinaga, Gen, Darío Balcazar, Athanase Badolo, et al. “From Macro to Micro: De Novo Genomes of Aedes Mosquitoes Enable Comparative Genomics among Close and Distant Relatives.” Genome Biology and Evolution, 2025, evaf142. https://doi.org/10.1093/gbe/evaf142.
 
 # Install
