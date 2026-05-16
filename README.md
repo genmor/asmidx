@@ -1,3 +1,6 @@
+# PLEASE NOTE
+I've decided to combine `asmidx` and `CSBfilter` into a single package which I am calling `asmtools` (https://github.com/genmor/asmtools). Future updates will be made there.
+
 # Citation
 If you use `asmidx` in your work, please cite: <br>
 
